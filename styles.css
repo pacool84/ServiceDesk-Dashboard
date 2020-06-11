@@ -115,3 +115,44 @@ body {
   font-weight: bold;
   font-size: 0.7em;
 }
+
+.trend-indicators {
+}
+
+.minicard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 2em;
+  background-color: #f0f3fa;
+  border-radius: 10px;
+  padding: 1.5em;
+}
+
+.minicard p {
+  margin: 0;
+}
+
+.minicard-trend {
+  font-size: 0.8em;
+  color: var(--gray-color);
+  font-weight: bold;
+}
+
+.minicard-trend-icon {
+  text-align: right;
+}
+
+.minicard-trend-icon img {
+  height: 32px;
+  width: 32px;
+}
+
+.minicard-trend-info {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.minicard-trend-average {
+  text-align: right;
+  justify-items: flex-end;
+}
