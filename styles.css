@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --skill1: hsl(195, 100%, 50%);
+  --yellow-moderate: hsl(37, 97%, 70%);
+  --red-negative: hsl(348, 97%, 39%);
+  --walmart: hsl(203, 89%, 53%);
+  --green-positive: hsl(163, 72%, 41%);
+  --gray-color: #aeb3c9;
+  --lowergray: #f8f9fe;
+}
+.header {
+  background-color: var(--lowergray);
+  padding-bottom: 100px;
+  border-radius: 0 0 20px 20px;
+  padding-top: 2em;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.header p {
+  color: var(--gray-color);
+  margin: 0.5em 0;
+  padding-bottom: 1em;
+  font-weight: bold;
+  border-bottom: 2px solid var(--gray-color);
+}
+
+.main-indicators {
+  margin-top: -50px;
+}
+
+.wrapper {
+  padding: 0 30px;
+}
+
+.layout {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f0f3fa;
+  text-align: center;
+  padding: 2em 0;
+  position: relative;
+}
+
+.card:before {
+  content: "";
+  height: 4px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.card.calls-incoming::before {
+  background: var(--walmart);
+}
+
+.card.calls-answered::before {
+  background-color: var(--green-positive);
+}
+
+.card.calls-missed::before {
+  background-color: var(--red-negative);
+}
+
+.card.service-level::before {
+  background-color: var(--yellow-moderate);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+}
+
+.card-title img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.card-stadistic {
+}
+
+.card-stadistic-number {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.card-stadistic-title {
+  display: block;
+  text-transform: uppercase;
+  color: var(--gray-color);
+  letter-spacing: 4px;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.card-variation {
+  color: var(--green-positive);
+  font-weight: bold;
+  font-size: 0.7em;
+}
