@@ -34,6 +34,7 @@ body {
 
 .main-indicators {
   margin-top: -50px;
+  margin-bottom: 3.5em;
 }
 
 .wrapper {
@@ -52,6 +53,9 @@ body {
   text-align: center;
   padding: 2em 0;
   position: relative;
+  -webkit-box-shadow: 4px 10px 21px -4px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 4px 10px 21px -4px rgba(0, 0, 0, 0.52);
+  box-shadow: 4px 10px 21px -4px rgba(0, 0, 0, 0.52);
 }
 
 .card:before {
@@ -116,7 +120,8 @@ body {
   font-size: 0.7em;
 }
 
-.trend-indicators {
+.trend-indicators h2 {
+  color: var(--gray-color);
 }
 
 .minicard {
@@ -126,6 +131,10 @@ body {
   background-color: #f0f3fa;
   border-radius: 10px;
   padding: 1.5em;
+  align-items: center;
+  -webkit-box-shadow: 4px 10px 21px -4px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 4px 10px 21px -4px rgba(0, 0, 0, 0.52);
+  box-shadow: 4px 10px 21px -4px rgba(0, 0, 0, 0.52);
 }
 
 .minicard p {
@@ -148,11 +157,41 @@ body {
 }
 
 .minicard-trend-info {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
 .minicard-trend-average {
   text-align: right;
   justify-items: flex-end;
+  color: var(--green-positive);
+  font-weight: bold;
+}
+
+.minicard-trend-average.is-negative {
+  color: var(--red-negative);
+  font-weight: 500;
+}
+
+@media screen and (min-width: 480px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5em;
+  }
+  .wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
